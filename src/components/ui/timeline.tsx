@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion } from "motion/react";
+import { motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -18,14 +18,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             setHeight(rect.height);
         }
     }, [ref]);
-
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start 10%", "end 50%"],
-    });
-
-    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-    const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
         <div
@@ -60,7 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-center">
+            <div className="flex flex-row items-center justify-center mt-96">
                 <h1 className="bg-clip-text text-transparent text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
                     Works
                 </h1>
@@ -96,8 +88,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 >
                     <motion.div
                         style={{
-                            height: heightTransform,
-                            opacity: opacityTransform,
+                            height: height + "px",
+                            opacity: 1,
                         }}
                         className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
                     />
