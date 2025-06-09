@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -11,6 +11,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
+    const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
         if (ref.current) {
@@ -21,47 +22,31 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     return (
         <div
-            className="w-full bg-transparent dark:bg-neutral-950 font-sans md:px-10"
+            className="w-full bg-transparent font-sans md:px-10"
             ref={containerRef}
         >
-            <div className="my-15">
-                <div className="flex flex-col items-center justify-between">
-                    <h1 className="bg-clip-text text-transparent text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
-                        Experience
-                    </h1>
-                    <div className="flex flex-row justify-between mt-10 w-2/3">
-                        <div className="flex flex-col items-start justify-start w-1/2">
-                            <h2 className="bg-clip-text text-transparent text-3xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
-                                Frontend Developer{" "}
-                                <span className="text-gray-400">Intern</span>
-                            </h2>
-                            <h2 className="bg-clip-text text-transparent text-2xl font-bold bg-gradient-to-br from-emerald-400 to-purple-400">
-                                KawanBantu
-                            </h2>
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-1/2">
-                            <p className="text-gray-100 text-md">
-                                • Rewrite entire codebase from Next.js to
-                                Sveltekit
-                                <br />
-                                • Developed withdrawal feature to request fund
-                                to super admin
-                                <br />• Adjusted user dashboard for mobile
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-row items-center justify-center mt-96">
+            <motion.div
+                className="flex flex-row items-center justify-center mt-96"
+                initial={{ opacity: 0, y: -20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+            >
                 <h1 className="bg-clip-text text-transparent text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
                     Works
                 </h1>
-            </div>
+            </motion.div>
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
                 {data.map((item, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className="flex justify-start pt-10 md:pt-40 md:gap-10"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{
+                            delay: 0.7 + index * 0.2,
+                            duration: 0.8,
+                            ease: "easeOut",
+                        }}
                     >
                         <div className="sticky top-20 flex flex-col md:flex-row z-40 items-center self-start max-w-xs lg:max-w-sm md:w-full">
                             <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
@@ -76,9 +61,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             <h3 className="md:hidden block text-2xl mb-4 text-left font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
                                 {item.title}
                             </h3>
-                            {item.content}{" "}
+                            {item.content}
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
                 <div
                     style={{
