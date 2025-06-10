@@ -76,7 +76,7 @@ export default function Home() {
                             )}
                         </motion.h1>
                         <motion.h2
-                            className="text-md sm:text-2xl md:text-3xl lg:text-5xl font-normal font-sans text-gray-100 tracking-tighter text-center md:text-right mt-2"
+                            className="text-md sm:text-2xl md:text-2xl lg:text-3xl font-normal font-sans text-gray-100 tracking-tighter text-center md:text-right mt-2"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{
                                 opacity: 1,
@@ -151,16 +151,16 @@ export default function Home() {
                                 ease: "easeOut",
                             }}
                         >
-                            <h2 className="bg-clip-text text-transparent text-2xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
+                            <h2 className="bg-clip-text text-transparent ml-2 md:ml-0 text-2xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
                                 Frontend Developer{" "}
                                 <span className="text-gray-300">Intern</span>
                             </h2>
-                            <h2 className="bg-clip-text text-transparent text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-br from-emerald-300 to-purple-300">
+                            <h2 className="bg-clip-text text-transparent ml-2 md:ml-0 text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-br from-emerald-300 to-purple-300">
                                 KawanBantu
                             </h2>
                         </motion.div>
                         <motion.div
-                            className="flex flex-col items-start justify-start w-full md:w-1/2 mt-4"
+                            className="flex flex-col items-start justify-start w-full md:w-1/2 mt-4 md:mt-0"
                             initial={{ opacity: 0, x: 20 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{
@@ -169,14 +169,28 @@ export default function Home() {
                                 ease: "easeOut",
                             }}
                         >
-                            <p className="text-gray-100 text-sm sm:text-base">
-                                • Rewrite entire codebase from Next.js to
-                                Sveltekit
-                                <br />
-                                • Developed withdrawal feature to request fund
-                                to super admin
-                                <br />• Adjusted user dashboard for mobile
-                            </p>
+                            <ul className="text-gray-100 font-sans font-semibold text-lg md:text-xl space-y-2">
+                                <li className="flex items-start">
+                                    <span className="mr-2 font-bold">•</span>
+                                    <span>
+                                        Rewrite entire codebase from Next.js to
+                                        Sveltekit
+                                    </span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-2 font-bold">•</span>
+                                    <span>
+                                        Developed withdrawal feature to request
+                                        fund to super admin
+                                    </span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-2 font-bold">•</span>
+                                    <span>
+                                        Adjusted user dashboard for mobile
+                                    </span>
+                                </li>
+                            </ul>
                         </motion.div>
                     </div>
                 </div>

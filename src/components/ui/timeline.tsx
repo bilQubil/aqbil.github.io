@@ -1,6 +1,6 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 interface TimelineEntry {
     title: string | React.ReactNode;
@@ -10,15 +10,7 @@ interface TimelineEntry {
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
-    const [height, setHeight] = useState(0);
     const isInView = useInView(ref, { once: true });
-
-    useEffect(() => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            setHeight(rect.height);
-        }
-    }, [ref]);
 
     return (
         <div
@@ -54,7 +46,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
                             </div>
-                            <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
+                            <h3 className="hidden md:block text-2xl md:pl-20 md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
                                 {item.title}
                             </h3>
                         </div>
@@ -67,19 +59,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
                     </motion.div>
                 ))}
-                <div
-                    style={{
-                        height: height + "px",
-                    }}
-                    className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200  [mask-image:linear-gradient(to_bottom,transparent_0%,black_25%,black_100%,transparent_20%)] "
-                >
-                    <div
-                        style={{
-                            height: height + "px",
-                            opacity: 1,
-                        }}
-                        className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
-                    />
+                <div className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] h-full bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-100 [mask-image:linear-gradient(to_bottom,transparent_2%,black_15%,black_95%,transparent_100%)] ">
+                    <div className="absolute inset-x-0 top-0 w-[2px] h-full bg-gradient-to-b from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full" />
                 </div>
             </div>
         </div>

@@ -7,8 +7,8 @@ export default function SideScroll() {
         <div className="w-full overflow-hidden my-4 md:my-8">
             {/* Gradient masks for smooth fade effect */}
             <div className="relative">
-                <div className="absolute left-0 top-0 w-10 md:w-20 h-full bg-gradient-to-r from-cyan-700 to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute right-0 top-0 w-10 md:w-20 h-full bg-gradient-to-l from-purple-800 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute left-0 top-0 w-10 md:w-20 h-full bg-gradient-to-r from-[#386494] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 w-10 md:w-20 h-full bg-gradient-to-l from-[#386494] to-transparent z-10 pointer-events-none"></div>
 
                 {/* Scrolling container */}
                 <div className="flex gap-2 md:gap-6 w-max animate-infinite-scroll">
@@ -32,7 +32,7 @@ export default function SideScroll() {
                                     </div>
                                 </CardBody>
                                 <CardFooter className="flex text-small justify-center text-center bg-transparent py-2 md:py-3">
-                                    <p className="text-gray-100 font-medium text-xs sm:text-sm truncate px-1">
+                                    <p className="text-gray-100 font-medium text-sm sm:text-md lg:text-lg truncate px-1">
                                         {tech.name}
                                     </p>
                                 </CardFooter>
