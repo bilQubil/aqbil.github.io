@@ -1,6 +1,14 @@
 export const projectsData = [
     {
-        title: "Moondrop (Fullstack)",
+        title: (
+            <a
+                href="https://vercel.com/bilqubils-projects/stardrop/BWo22aDJpXQPuhHUkV1uDf8XpeyC"
+                target="_blank"
+                className="bg-clip-text bg-gradient-to-br from-cyan-100 to-purple-300 hover:text-pink-300 transition-colors duration-300 flex items-center gap-2"
+            >
+                Moondrop (Fullstack)
+            </a>
+        ),
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
@@ -95,7 +103,15 @@ export const projectsData = [
         ),
     },
     {
-        title: "Minabung (Mobile)",
+        title: (
+            <a
+                href="https://drive.google.com/file/d/1zfhp6LqKeUqSJfdu0KAUEgRzREoCPp4z/view?usp=drive_link"
+                target="_blank"
+                className="bg-clip-text bg-gradient-to-br from-cyan-100 to-purple-300 hover:text-pink-300 transition-colors duration-300 flex items-center gap-2"
+            >
+                Minabung (Mobile)
+            </a>
+        ),
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">

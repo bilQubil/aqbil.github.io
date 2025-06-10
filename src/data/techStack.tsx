@@ -64,4 +64,14 @@ export const techStack = [
         imageUrl:
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
     },
+    {
+        name: "PostgreSQL",
+        imageUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    },
+    {
+        name: "Sequelize",
+        imageUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original.svg",
+    },
 ];
