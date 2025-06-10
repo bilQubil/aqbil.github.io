@@ -31,14 +31,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
             >
-                <h1 className="bg-clip-text text-transparent text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
+                <h1 className="bg-clip-text text-transparent text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
                     Works
                 </h1>
             </motion.div>
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
                 {data.map((item, index) => (
                     <motion.div
-                        key={index}
+                        key={`timeline-${index}-${
+                            typeof item.title === "string" ? item.title : index
+                        }`}
                         className="flex justify-start pt-10  md:gap-10"
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
