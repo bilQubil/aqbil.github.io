@@ -88,7 +88,7 @@ export default function Home() {
                                 },
                             }}
                         >
-                            <p>Maybe i can help :)</p>
+                            <p>Let&apos;s build something amazing together</p>
                         </motion.h2>
                     </div>
                     <div className="flex flex-col items-start md:items-end justify-start md:justify-end w-full md:w-1/3 mt-10 md:mt-0 md:translate-y-14">
@@ -155,8 +155,13 @@ export default function Home() {
                                 Frontend Developer{" "}
                                 <span className="text-gray-300">Intern</span>
                             </h2>
-                            <h2 className="bg-clip-text text-transparent ml-2 md:ml-0 text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-br from-emerald-300 to-purple-300">
-                                KawanBantu
+                            <a href="https://kawanbantu.com" target="_blank">
+                                <h2 className="bg-clip-text hover:text-cyan-300 transition-colors duration-100 text-transparent ml-2 md:ml-0 text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-br from-emerald-300 to-purple-300">
+                                    KawanBantu
+                                </h2>
+                            </a>
+                            <h2 className="bg-clip-text text-transparent ml-2 md:ml-0 text-md sm:text-md md:text-md font-bold bg-gradient-to-br from-cyan-100 to-gray-100">
+                                <p>10/2024 - 05/2025</p>
                             </h2>
                         </motion.div>
                         <motion.div

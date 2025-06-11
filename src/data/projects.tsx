@@ -9,6 +9,7 @@ export const projectsData = [
                 Moondrop (Fullstack)
             </a>
         ),
+        date: "1 week | 03/2025",
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
@@ -56,6 +57,7 @@ export const projectsData = [
     },
     {
         title: "Uniqlo (Fullstack)",
+        date: "2 weeks | 02/2025",
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
@@ -112,6 +114,7 @@ export const projectsData = [
                 Minabung (Mobile)
             </a>
         ),
+        date: "2 week | 03/2025",
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
@@ -162,6 +165,7 @@ export const projectsData = [
     },
     {
         title: "Youtube Clone (Mobile)",
+        date: "1 week | 02/2025",
         content: (
             <div>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">

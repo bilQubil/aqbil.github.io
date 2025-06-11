@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 interface TimelineEntry {
     title: string | React.ReactNode;
     content: React.ReactNode;
+    date: string;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -24,7 +25,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
             >
                 <h1 className="bg-clip-text text-transparent text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-b from-cyan-100 to-gray-100">
-                    Works
+                    Projects
                 </h1>
             </motion.div>
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -46,14 +47,22 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
                             </div>
-                            <h3 className="hidden md:block text-2xl md:pl-20 md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
-                                {item.title}
-                            </h3>
+                            <div className="flex flex-col">
+                                <h3 className="hidden md:block text-2xl md:pl-20 md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
+                                    {item.title}
+                                </h3>
+                                <h3 className="hidden md:block md:pl-20 text-md sm:text-md md:text-md font-bold bg-clip-text text-transparent bg-gradient-to-br from-cyan-100 to-gray-100">
+                                    {item.date}
+                                </h3>
+                            </div>
                         </div>
 
                         <div className="relative pl-20 pr-4 md:pl-4 w-full">
                             <h3 className="md:hidden block text-2xl mb-4 text-left font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100">
                                 {item.title}
+                            </h3>
+                            <h3 className="md:hidden block text-md sm:text-md md:text-md font-bold bg-clip-text text-transparent bg-gradient-to-br from-cyan-100 to-gray-100">
+                                {item.date}
                             </h3>
                             {item.content}
                         </div>
