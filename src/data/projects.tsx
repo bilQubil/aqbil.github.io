@@ -69,7 +69,7 @@ export const projectsData = [
                 </p>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
                     Tech Stack: <br /> React, Tailwind CSS, Express.js,
-                    PostgreSQL, Sequelize, Midtrans, Gemini AI
+                    PostgreSQL, Sequelize, Jest, Gemini AI
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <img
@@ -127,8 +127,7 @@ export const projectsData = [
                     collaborative work.
                 </p>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
-                    Tech Stack: <br /> React Native, MongoDB, Gemini AI,
-                    Express.js, Expo
+                    Tech Stack: <br /> React Native, Expo
                 </p>
                 <div className="grid grid-cols-4 gap-4">
                     <img
@@ -174,7 +173,8 @@ export const projectsData = [
                     recommendations.
                 </p>
                 <p className="mb-8 text-xl font-sans font-semibold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-gray-100 ">
-                    Tech Stack: <br /> React Native, Express.js, Expo, MongoDB
+                    Tech Stack: <br /> React Native, GraphQL, Expo, MongoDB,
+                    Redis
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                     <img

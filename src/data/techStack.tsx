@@ -20,16 +20,6 @@ export const techStack = [
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
     },
     {
-        name: "Vue.js",
-        imageUrl:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
-    },
-    {
-        name: "Nuxt.js",
-        imageUrl:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg",
-    },
-    {
         name: "React Native",
         imageUrl:
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
